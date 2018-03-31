@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>一元成财首页</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="./public/library/bootstrap3.3.7.min.css">
+	<link rel="stylesheet" href="./public/css/home.css">
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+	<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+	<script src="https://unpkg.com/element-ui@2.2.2/lib/index.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+	<script src="./public/library/bootstrap.min.js"></script>
+
+	<script src="https://cdn.bootcss.com/hammer.js/2.0.8/hammer.min.js"></script>
+</head>
+<body>
+	<div class="vue_html">
+		<header>
+			<div class="nav">
+				<div class="container">
+					<div class="search">
+						<input type="text" name="search_input" class="search_input" placeholder="搜索答主和相关问题">
+					</div>
+				</div>
+				<div class="bs-example" data-example-id="simple-carousel">
+				    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				      <ol class="carousel-indicators">
+				        <li data-target="#carousel-example-generic"  v-for="(slide,index) in slide_a"
+				        :class="{'active':index==0}"
+				        :data-slide-to="index"></li>
+				       
+				      </ol>
+				      <div class="carousel-inner" role="listbox">
+				        <div class="item" v-for="(slide,index) in slide_a"
+				        :class="{'active':index==0}">
+				        <a :href="slide.link_url"></a>
+				          <img  :src="baseURL+slide.pic_path" data-holder-rendered="true">
+				        </div>
+				       
+				      </div>
+				    </div>
+				  </div>
+			</div>
+			<div class="menu">
+				<div style="height:30px"></div> 
+				<div class="container">
+					<div class="row">
+					  		<div class="col-xs-3 menu_img">
+						  		<img src="./public/images/tisheng.png">
+						  		<p class="menu_title">一元提升</p>
+					  		</div>
+					  		<div class="col-xs-3 menu_img">
+						  		<img src="./public/images/zhaopin.png">
+						  		<p class="menu_title">一元教学</p>
+					  		</div>
+					  		<div class="col-xs-3 menu_img">
+						  		<a href="index.php?control=job&action=index"><img src="./public/images/jiaoxue.png">
+						  		<p class="menu_title">一元招聘</p></a>
+					  		</div>
+					  		<div class="col-xs-3 menu_img">
+						  		<a href="index.php?control=job&action=index"><img src="./public/images/mall.png">
+						  		<p class="menu_title">一元商城</p></a>
+					  		</div>
+						</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="kc_list_first">
+				<h4 class="kc_title">一 / 元 / 课 / 程</h4>
+				<div class="container">
+					<div class="kc_nav">
+						<div class="el-tabs__nav-scroll">
+							<div role="tablist" class="el-tabs__nav" style="transform: translateX(0px);">
+								<div class="el-tabs__item is-top is-active" aria-selected="true">明星</div>
+								<div class="el-tabs__item is-top">设计</div>
+								<div class="el-tabs__item is-top">开发</div>
+								<div class="el-tabs__item is-top">职场</div>
+							</div>
+						</div>
+					</div>
+					<div class="kc_main">
+						<ul class="kc_list">
+							<li>
+								<div class="list_left">
+									<img src="./public/images/list_1.png">
+								</div>
+								<div class="list_right">
+									<h4>PS图像合成技术精讲</h4>
+									<p>主讲人：kevin</p>
+									<div class="list_bottom">
+										<p>设计分类</p>
+										<span>268人参加</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="list_left">
+									<img src="./public/images/list_2.png">
+								</div>
+								<div class="list_right">
+									<h4>PS图像合成技术精讲</h4>
+									<p>主讲人：kevin</p>
+									<div class="list_bottom">
+										<p>设计分类</p>
+										<span>268人参加</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="list_left">
+									<img src="./public/images/list_3.png">
+								</div>
+								<div class="list_right">
+									<h4>PS图像合成技术精讲</h4>
+									<p>主讲人：kevin</p>
+									<div class="list_bottom">
+										<p>设计分类</p>
+										<span>268人参加</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="list_left">
+									<img src="./public/images/list_4.png">
+								</div>
+								<div class="list_right">
+									<h4>PS图像合成技术精讲</h4>
+									<p>主讲人：kevin</p>
+									<div class="list_bottom">
+										<p>设计分类</p>
+										<span>268人参加</span>
+									</div>
+								</div>
+							</li>
+							
+						</ul>
+						
+					</div>
+				
+				</div>
+			</div>
+			<div class="kc_list_second">
+				<h4 class="kc_title">一 / 元 / 咨 / 讯</h4>
+				<div class="container">
+					<div class="kc_main">
+						<ul class="kc_list">
+							<li>
+								<img src="./public/images/picture.png" class="img_title">
+							</li>
+							<li>
+								<div class="list_left">
+									<p>为你准备好了全面、系统的Python3入门视频课程，人工智能异常火爆异常火爆异常火爆</p>
+								</div>
+								<div class="list_right">
+									<img src="./public/images/11.png">
+								</div>
+							</li>
+							<li>
+								<div class="list_left">
+									<p>移动端设计的规范指引，为更多大学生步入UI设计行业提供有力的支持有力的支持有力的支持</p>
+								</div>
+								<div class="list_right">
+									<img src="./public/images/22.png">
+								</div>
+							</li>
+							<li>
+								<div class="list_left">
+									<p>大学生通过自己在宿舍做极客，每月的收入超过了5万元，成为了当今社会的当今社会的当今社会的</p>
+								</div>
+								<div class="list_right">
+									<img src="./public/images/33.png">
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="kc_list_third">
+				<h4 class="kc_title">一 / 元 / 人 / 才</h4>
+				<div class="container">
+					<div class="kc_nav">
+						<div class="el-tabs__nav-scroll">
+							<div role="tablist" class="el-tabs__nav" style="transform: translateX(0px);">
+								<div class="el-tabs__item is-top is-active" aria-selected="true">明星</div>
+								<div class="el-tabs__item is-top">设计</div>
+								<div class="el-tabs__item is-top">开发</div>
+								<div class="el-tabs__item is-top">最新就业</div>
+							</div>
+						</div>
+					</div>
+					<div class="kc_main">
+						<ul class="kc_list">
+							<li class="underline">
+								<div class="list_left">
+									<img src="./public/images/women.jpg">
+								</div>
+								<div class="list_right">
+									<ul>
+										<li class="list_right_top">
+											<p>紫嫣然</p>
+											<span>电商视觉设计学员</span>
+										</li>
+										<li class="list_right_center">
+											<p>成就指数：</p>
+											<span>⭐⭐⭐⭐⭐</span>
+										</li>
+										<li class="list_right_bottom">
+											<p>设计分类</p>
+											<span>学习时长：100小时</span>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="underline">
+								<div class="list_left">
+									<img src="./public/images/women.jpg">
+								</div>
+								<div class="list_right">
+									<ul>
+										<li class="list_right_top">
+											<p>紫嫣然</p>
+											<span>电商视觉设计学员</span>
+										</li>
+										<li class="list_right_center">
+											<p>成就指数：</p>
+											<span>⭐⭐⭐⭐⭐</span>
+										</li>
+										<li class="list_right_bottom">
+											<p>设计分类</p>
+											<span>学习时长：100小时</span>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="underline">
+								<div class="list_left">
+									<img src="./public/images/women.jpg">
+								</div>
+								<div class="list_right">
+									<ul>
+										<li class="list_right_top">
+											<p>紫嫣然</p>
+											<span>电商视觉设计学员</span>
+										</li>
+										<li class="list_right_center">
+											<p>成就指数：</p>
+											<span>⭐⭐⭐⭐⭐</span>
+										</li>
+										<li class="list_right_bottom">
+											<p>设计分类</p>
+											<span>学习时长：100小时</span>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="underline">
+								<div class="list_left">
+									<img src="./public/images/women.jpg">
+								</div>
+								<div class="list_right">
+									<ul>
+										<li class="list_right_top">
+											<p>紫嫣然</p>
+											<span>电商视觉设计学员</span>
+										</li>
+										<li class="list_right_center">
+											<p>成就指数：</p>
+											<span>⭐⭐⭐⭐⭐</span>
+										</li>
+										<li class="list_right_bottom">
+											<p>设计分类</p>
+											<span>学习时长：100小时</span>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div style="height: 120px;text-align: center;color: #9f9f9f;line-height: 50px;font-size: 18px;">
+				没 有 更 多 了
+			</div>
+		</main>
+		<footer>
+			<div class="footer_box">
+				<div class="footer_home">
+					<div>
+						<img src="./public/images/home.png">
+						<p>首页</p>
+					</div>
+				</div>
+				<div class="footer_more" @click.stop="toggle">
+					<img src="./public/images/foot_logo.png">
+				</div>
+				<div class="footer_main test" ref="footerMain">
+					<img class="clear" src="./public/images/icon_one.png">
+					<img class="clear" src="./public/images/icon_two.png">
+					<img class="clear" src="./public/images/icon_three.png">
+					<img class="clear" src="./public/images/icon_four.png">
+				</div>
+				<div class="footer_user">
+					<div>
+						<img src="./public/images/user.png">
+						<p>我的</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
+
+ 
+
+<script>        
+	$(function(){
+		var myElement = document.getElementById('carousel-example-generic')
+		var hm = new Hammer(myElement);
+		hm.on("swipeleft",function(){
+			$('#carousel-example-generic').carousel('next')
+		})
+		hm.on("swiperight",function(){
+			$('#carousel-example-generic').carousel('prev')
+		})
+	}) 
+</script>	
+<script type="text/javascript">
+
+	new Vue({
+	    name: 'one_dollar',
+	    el:'.vue_html',
+	    data: {
+	        
+	        	activeName: 'second',
+	        	slide_a:[],   //幻灯片数据
+	        	baseURL:'<?php echo $baseURL?>', //接口基础地址
+	    },
+	    created(){
+	    	this.init()
+	    },
+	    methods: {
+	    	init(){
+	    		$.get(this.baseURL+"/api/Mobilehdp",
+	    			{'page_cate' : 'home'},
+	    			(rtnD)=>{
+	    				this.slide_a = rtnD
+	    				console.log(rtnD)
+	    			})
+	    	},
+	        handleClick(tab, event) {
+	            console.log(tab, event);
+	        },
+	        toggle() {
+	        	let footerMain = this.$refs.footerMain;
+	        	if (footerMain.classList.contains('test')) {
+	        		footerMain.classList.remove('test')
+	        		let imgs = footerMain.getElementsByTagName('img');
+	        		for (var i = imgs.length - 1; i >= 0; i--) {
+	        			imgs[i].classList.remove('clear')
+	        		}
+	        	}	else {
+	        		footerMain.classList.add('test')
+	        		let imgs = footerMain.getElementsByTagName('img');
+	        		for (var i = imgs.length - 1; i >= 0; i--) {
+	        			imgs[i].classList.add('clear')
+	        		}
+	        	}
+	        }
+	    }
+	})
+</script>
+ 

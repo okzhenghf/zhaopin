@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<!-- 引入样式 -->
+	<link rel="stylesheet" href="https://unpkg.com/element-ui@2.2.2/lib/theme-chalk/index.css">
+	<!-- 引入组件库 -->
+	<link rel="stylesheet" href="https://unpkg.com/mint-ui@2.2.13/lib/style.css">
+	<script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+	<script src="https://unpkg.com/vue-router@2.4.0/dist/vue-router.js"></script>
+	
+	<script src="https://unpkg.com/mint-ui@2.2.13/lib/index.js"></script>
+	<script src="https://unpkg.com/element-ui@2.2.2/lib/index.js"></script>
+	<link rel="stylesheet" href="./public/css/company.css">
+</head>
+
+<body>
+<div id="app">
+	<header class="title">
+
+		<el-row :gutter="20">
+
+		  <el-col :span="4">
+		  	<img src="https://www.zhipin.com/v2/h5/wap/images/logo-x.png"></el-col>
+		  <el-col :span="8"><h3>找工作跟老板谈</h3></el-col>
+		
+		  <el-col :span="8" class="right"><el-button round>立即注册</el-button></el-col>
+		</el-row>
+	</header>
+	<div class="box">
+		<mt-swipe :show-indicators="false" :auto="0">
+		  <mt-swipe-item v-for="n in 4"><img src="https://img2.bosszhipin.com/mcs/chatphoto/20160317/a84e74ba4e7b89c33dd961d2f15ed00a0c0e6d574816f3f7a66d591ad9d9a980.jpg" alt="">
+		  </mt-swipe-item>
+		  <span class="c_s">0/4</span>
+		</mt-swipe>
+	</div>
+	<div class="gs_lg">
+		<div class="left"><img src="https://img.bosszhipin.com/beijin/mcs/chatphoto/20160426/ad5926a62ce74b7965705dc90788588d35e06df888ab2d5255d0e484afd927a2.jpg" alt=""></div>
+			<div class="right">
+				<p class="big">致景科技</p>
+				<p>http://www.baibu.la</p>
+				<p><span>互联网</span>
+				<span>B轮</span>
+				<span>100-499人</span></p>
+			</div>
+	</div>
+	<div class="tab">
+
+
+	<!-- 	<div class="gs_ji cur" ><h2>公司简介</h2></div>
+		<div class="gs_zp"><h2>招聘岗位</h2></div>
+	</div> -->
+
+	<el-tabs v-model="activeName" @click="handleClick">
+	    <el-tab-pane label="公司简介" name="first" class="first">
+	    	<p class="detail-text show-switch" data-height="120" deep="4">【企业介绍】<br data-filtered="filtered">2016年是垂直B2B发展的元年，“互联网+”及“供给册改革”的政策推出，许多行业出现供需失衡，再加上资本的推波助澜，各类垂直B2B电商雨后春笋般涌现出来。“百布”作为中国7万级别的纺织品B2B行业的领军企业，及业内唯一的B2B自营平台，自正式经营后表现出了与钢材、化工等行业B2B领军成功企业相当的实力。<br data-filtered="filtered">“百布”成立于2013年12月，隶属于广州致景信息科技有限公司(广州一匹布纺织品有限公司），是中国首家致力于改革纺织行业传统交易模式的移动互联网公司。总部位于广州市海珠区，首创以O2O模式改造线下纺织行业传统落后的交易模式，是垂直B2B下的后起之秀。<br data-filtered="filtered">“百布”立足于纺织行业的信息服务领域，迅速地在激烈的纺织市场竞争中搏得一席之地，并且业绩呈猛增的状态稳步发展。自产品投放市场至今，已入驻成功的商铺达到了5000多家、采购商数量高达20000多家。2016年，服务范围延伸至广东佛山、广东东莞、浙江杭州及柯桥等区域，迅速建立起完善的纺织市场渠道。<br data-filtered="filtered"><br data-filtered="filtered">【企业文化】<br data-filtered="filtered">1、远景：让天下人买布省心、实惠<br data-filtered="filtered">做永续经营的高成长型企业<br data-filtered="filtered">让百布人成为全球纺织业最有价值队伍<br data-filtered="filtered">2、使命：推进全球纺织产业链升级<br data-filtered="filtered">3、价值观：客户第一 胜者为王 团队合作 诚信正直<br data-filtered="filtered">垂直攀登 学习成长 享受变化<br data-filtered="filtered">“百布”不仅是创业者点燃激情和放飞梦想的平台，更是有志之士担当责任、饯行使命、实现人生价值的璀璨舞台。2016年，“百布”将一群快乐、诚信的人，团结成一支有责任心、强执行力的队伍，让每一个人在平凡的岗位创造出非凡的业绩，把移动互联网产品工作演绎成令同行瞩目的事业。<br data-filtered="filtered"><br data-filtered="filtered">【贡献回报】<br data-filtered="filtered">如果没有收获，也就无人会去耕耘。在“百布”，永远有值得你不懈奋斗的动力。<br data-filtered="filtered">1、具有竞争力的薪酬。<br data-filtered="filtered">2、发展机会。<br data-filtered="filtered">3、岗位流动机制。<br data-filtered="filtered">4、伯乐奖励。<br data-filtered="filtered">5、社会保险。<br data-filtered="filtered">6、住房公积金。<br data-filtered="filtered">7、商业意外险。<br data-filtered="filtered">8、带薪假期。<br data-filtered="filtered">9、团队建设活动。<br data-filtered="filtered">10、节日福利。<br data-filtered="filtered">11、好建议大礼包。<br data-filtered="filtered"><br data-filtered="filtered">【联系我们】<br data-filtered="filtered">广州市海珠区逸景路珠江国际纺织城B栋梭织大厦<br data-filtered="filtered">广州市海珠区新滘西路西路533号鸿洲国际轻纺城（展厅）<br data-filtered="filtered">佛山分公司：广东省佛山市南海区桂城街道桂城街道南海大道北财汇大厦<br data-filtered="filtered">杭州分公司：浙江省杭州市江干区城区杭海路116号中纺中心服装城<br data-filtered="filtered">柯桥分公司：浙江省绍兴市柯桥区湖西路天马商务大厦<br data-filtered="filtered">东莞分公司：广东省东莞市虎门镇银龙路大莹东方国际金牛座</p>
+	    </el-tab-pane>
+	    <el-tab-pane label="招聘岗位" name="second">
+	    	<el-tabs v-model="activeName1" @click="handleClick1">
+	    		<el-tab-pane label="公司" name="first1">
+	    			<el-row :gutter="20">
+	    				<el-col :span="18">
+	    					<h3>3413</h3>
+	    					<el-row :gutter="20">
+			    				<el-col :span="8">ssaad</el-col>
+			    				<el-col :span="8">ddsds</el-col>
+			    				<el-col :span="8">ddsds</el-col>
+			    			</el-row>
+	    				</el-col>
+	    				<el-col :span="6"><h3>3413</h3></el-col>
+	    			</el-row>
+	    			
+	    		</el-tab-pane>
+	    		<el-tab-pane label="公司" name="second1"></el-tab-pane>
+	    		<el-tab-pane label="公司" name="third1"></el-tab-pane>
+	    		<el-tab-pane label="公司" name="fourth1"></el-tab-pane>
+	    		<el-tab-pane label="公司简介" name="fivth1"></el-tab-pane
+	    	</el-tabs>
+	    </el-tab-pane>
+	</el-tabs>
+<!-- 	<div content>
+		<div gs_xq>ggggggg</div>
+		<ul>
+			<li></li>
+		</ul>
+	</div> -->
+ 
+</div>
+
+<script>
+	new Vue({
+		el:'#app',
+		data:{
+			activeName: 'first',
+			activeName1: 'first1',
+
+		},
+		methods:{
+			  handleClick(tab, event) {
+		        console.log(tab, event);
+		      },
+		      handleClick1(tab, event) {
+		        console.log(tab, event);
+		      }
+		}
+	})
+</script>
+</body>
+</html>

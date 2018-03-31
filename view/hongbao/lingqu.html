@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./public/library/bootstrap-vue.min.css">
+
+
+	<style type="text/css">
+	*{padding: 0;margin: 0;}
+	ul,li{list-style-type: none;}
+		.hongbao_box .modal-dialog {width: 88%; margin: 20px auto;}
+		.hongbao_box .modal-content{background-color: #f23e30}
+		.hongbao_box .h_title{color:#fccd4b}
+		.hongbao_box .h_day{background-color: #eae4e4;padding: 10px}
+		.hongbao_box .h_day li{background-color: #ffffff;margin-bottom: 10px;height: 35px;line-height: 35px;padding-left: 10px;}
+		.hongbao_box .num_d{color: #b9b9b9}
+		.hongbao_box .mn_v{color: #ec5259}
+		.hongbao_box  li.cur_day{background-color: #fbbb4d;font-size: 18px}
+		.hongbao_box  li.cur_day .num_d{ color: #fff }
+		.hongbao_box  li.cur_day .mn_v{ font-weight: bold; }
+
+	</style>
+</head>
+<script type="text/javascript" src="https://cdn.bootcss.com/vue/2.5.15/vue.min.js"></script>
+	<script type="text/javascript" src="https://cdn.bootcss.com/vue-resource/1.5.0/vue-resource.min.js"></script>
+
+	<script type="text/javascript" src="./public/library/bootstrap-vue.min.js"></script>
+<body>
+<div class="vue_view">
+    <b-alert :show="dismissCountDown" dismissible="true"  @dismissed="dismissCountDown=0">领取成功！</b-alert>
+	<b-modal v-model="isShow" hide-footer="true" hide-header="true"  class="hongbao_box">
+		<h2 class="h_title">新人专享</h2>
+			<ul class="h_day">
+				<!-- 如果是第一天，那么就加一个类 -->
+				<li v-for="n in 7" :class="{'cur_day':people_day==n}">
+					<b-row>
+						<b-col class="num_d">第{{n}}天</b-col>
+						<b-col class="mn_v">0.88元</b-col>
+					</b-row>
+				</li>
+			</ul>
+			<b-button  variant="warning" size="lg" block="true"
+			@click="go_money()"
+			>领取</b-button>
+	</b-modal>
+	
+</div>
+	
+</body>
+</html>
+
+	<script>
+		new Vue({
+			el:'.vue_view',
+			data:{
+				isShow:'<?php echo $isShow;?>',
+				dismissCountDown:0,//是否领取，0没有
+				people_day:'<?php echo $people_day;?>',
+			},
+			created(){
+			let is_show = '<?php echo $isShow;?>'
+			this.isShow = is_show == 1 ?true:false
+		    },
+			methods:{
+				go_money(){
+				this.$http.get('index.php?control=hongbao&action=add_log',{
+					params:{
+						people_day:this.people_day
+					}
+				}).then((rtnD)=>{
+					this.isShow = false
+					this.dismissCountDown = 3
+				})
+				}
+			}
+		})
+	</script>

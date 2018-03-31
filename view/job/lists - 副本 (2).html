@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="./public/css/lists.css">
+<!-- <script type="text/javascript" src="https://cdn.bootcss.com/vue/2.5.15/vue.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/vue-resource/1.5.0/vue-resource.min.js"></script>
+<script type="text/javascript" src="./public/library/vue/bscroll.min.js"></script> -->
+
+	<script type="text/javascript" src="./public/library/vue.min.js"></script>
+	<script type="text/javascript" src="./public/library/vue-resource.min.js"></script>
+	<script type="text/javascript" src="./public/library/bscroll.min.js"></script>
+
+</head>
+<style>
+	body{
+		height: 100%;
+	}
+</style>
+<body>
+<div class="container job_list" ref="job_list_box">
+<p v-if="loading">加载中....</p>
+<div class="box">
+	<div class="search">
+		<img src="https://www.zhipin.com/v2/h5/wap/images/icon-home.png" alt="">
+		<p><a href="">广州</a>
+		<input type="text" value="PHP">
+		<img src="https://www.zhipin.com/v2/h5/wap/images/icon_close.png" alt=""></p>
+		<button>搜索</button>
+	</div>
+	<div class="menu">
+		<ul class="menu-list" >
+			<li>经验</li>
+			<li>学历</li>
+			<li>薪资</li>
+			<li>规模</li>
+			<li>融资</li>
+		</ul>
+		<ul class="menu-content">
+			<li><a href="">不限1</a></li>
+			<li><a href="">中专及以下</a></li>
+			<li><a href="">高中</a></li>
+			<li><a href="">大专</a></li>
+			<li><a href="">本科</a></li>
+			<li><a href="">硕士</a></li>
+			<li><a href="">博士</a></li>
+		</ul>
+		<ul class="menu-content">
+			<li><a href="">不限2</a></li>
+			<li><a href="">中专及以下</a></li>
+			<li><a href="">高中</a></li>
+			<li><a href="">大专</a></li>
+			<li><a href="">本科</a></li>
+			<li><a href="">硕士sss</a></li>
+			<li><a href="">博士</a></li>
+		</ul>
+		<ul class="menu-content">
+			<li><a href="">不限3</a></li>
+			<li><a href="">中专及以下</a></li>
+			<li><a href="">高中</a></li>
+			<li><a href="">大专</a></li>
+			<li><a href="">本科</a></li>
+			<li><a href="">硕士</a></li>
+			<li><a href="">博士</a></li>
+		</ul>
+		<ul class="menu-content">
+			<li><a href="">不限4</a></li>
+			<li><a href="">中专及以下</a></li>
+			<li><a href="">高中</a></li>
+			<li><a href="">大专</a></li>
+			<li><a href="">本科</a></li>
+			<li><a href="">硕士</a></li>
+			<li><a href="">博士</a></li>
+		</ul>
+		<ul class="menu-content">
+			<li><a href="">不限5</a></li>
+			<li><a href="">中专及以下</a></li>
+			<li><a href="">高中</a></li>
+			<li><a href="">大专</a></li>
+			<li><a href="">本科</a></li>
+			<li><a href="">硕士</a></li>
+			<li><a href="">博士</a></li>
+		</ul>
+	</div>
+	<div class="loading">
+		<ul class="loading_list">
+			<li v-for="info in job_list" >
+				<a href="www.baidu.com">
+					<!-- <img src="https://www.zhipin.com/v2/chat_v2/images/v2/defaultlogov2.jpg" alt="">
+					<div class="text" >
+						<div class="title"><h4>{{info.job_name}}</h4><span>6K-8K</span></div>
+					    <div class="name">心意店址科技</div>
+					    <div class="msg">
+					      <em>广州</em>
+					      <em>1年以内</em>
+					      <em>本科</em>
+					    </div>
+					</div> -->
+					111111111111111111
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</div>
+</body>
+</html>
+<script>
+    var menu_list= document.getElementsByClassName('menu-list')[0];
+    //console.log(menu_list)
+    // var menu_list_li = menu_list.getElementsByTagName("li");  
+    //console.log(menu_list.children)
+    var menu_content = document.querySelectorAll(".menu-content")
+    //console.log(menu_content[1])
+    for(var i=0;i<menu_list.children.length;i++){
+    	menu_list.children[i].id=i;
+    	menu_list.children[i].onclick=function(){
+    		for(var i=0;i<menu_content.length;i++){
+    			menu_content[i].style.display= "none";
+    		}
+    		if(menu_content[this.id].style.display== "none"){
+    		    menu_content[this.id].style.display= "block";
+    		}
+    		else if(menu_content[this.id].style.display== "block"){
+    			console.log(1)
+    			menu_content[this.id].style.display= "none"
+    		}
+    	}
+    };
+    function newLocation(){
+    	window.location="//3-21/index.php?control=job&action=info"
+    	console.log(1)
+    }
+    new Vue({
+    	el:'.job_list',
+    	data:{
+    		    job_list:[],
+    		    loading:false,
+				page:1,//数据的页码
+				action_step:null,//up上拉，down下拉
+    	},
+    	created(){
+    		this.init()
+    	},
+    	mounted(){
+				// dom节点已生成
+				this.$nextTick(() => {
+					// nextTick是一个异步函数，为了确保 DOM 已经渲染
+					let bsscroll = new BScroll(this.$refs.job_list_box,{
+						probeType:3//时时监听滚动
+					})
+// touchStart
+// touch
+// touchEnd
+// 往左、往右
+// console.log(bsscroll)
+					bsscroll.on('scrollStart',(position)=>{
+						this.loading = true
+					})
+					bsscroll.on('scroll',(position)=>{
+						 let cur_y = Math.round(position.y)
+						 // console.log(cur_y)
+						 
+							if (cur_y > 0 && this.action_step == null) {
+								// 上拉
+								this.action_step = 'up'
+							}else if( cur_y < 0 && this.action_step == null ){
+								// 下拉
+								this.action_step = 'down';	
+							}
+							console.log(this.action_step)
+					})
+					bsscroll.on('scrollEnd',(position)=>{
+					 	console.log(this.action_step)
+
+						if (this.action_step == 'down') {
+							// 往上拉
+							++this.page			
+							// 异步
+							this.$http.get("http://localhost/zhixin/api/job/lists",{
+								params:{
+									p:this.page
+								}
+							})
+							.then((rtnD)=>{ 
+								// console.log(this.job_list)
+								this.job_list.unshift(...rtnD.data)
+								this.loading = false
+								this.action_step = null
+							})	
+						}else{
+							this.loading = false
+							this.action_step = null
+						}
+						// else if(this.action_step == 'down'){
+						// 	--this.page			
+						// 	// 异步
+						// 	this.$http.get("http://localhost/zhixin/api/job/lists",{
+						// 		params:{
+						// 			p:this.page
+						// 		}
+						// 	})
+						// 	.then((rtnD)=>{ 
+						// 		this.job_list.unshift(...rtnD.data)
+						// 		this.loading = false
+						// 		this.action_step = null
+						// 	})	
+						// }
+					})
+				})
+			},
+    	methods:{
+    		init(){
+    			this.$http.get("http://localhost/zhixin/api/job/lists",{
+    				params:{
+    					p:this.page
+    				}
+    			})
+    			.then((rtnD)=>{
+    				this.job_list = rtnD.data
+    			})
+    		},
+    	}
+    })
+</script>

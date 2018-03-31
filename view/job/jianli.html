@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>列表</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="./public/library/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./public/library/bootstrap-vue.min.css">
+	<script type="text/javascript" src="https://cdn.bootcss.com/vue/2.5.15/vue.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/vue-resource/1.5.0/vue-resource.min.js"></script>
+<link rel="stylesheet" href="./public/css/jianli.css">
+</head>
+<body>
+	<div class="job_jianli">
+		<div class="A1">
+			 <b-container>
+			    <b-row class='A1_1'> 
+			        <b-col  cols = "6"  class='zhi'>boss直播</b-col > 
+			        
+			        <b-col class='wei'>更新时间10-10-10 </b-col > 
+			    </b-row > 
+			 </b-container >			 
+		</div>
+		<div class="c1">
+            <b-row class='c2_2'> 
+			        <b-col cols = "8" class='qian'>XXX   
+
+			        	<p class="gray">应届生&nbsp;|&nbsp;大专学历&nbsp;|&nbsp;在职</p>
+			        	<p class="gray">电话：&nbsp;|&nbsp;微信&nbsp;|&nbsp;在职</p>
+
+			        </b-col > 
+			        
+			        <b-col class="figure"><img src="https://img2.bosszhipin.com/boss/avatar/avatar_2.png" alt="" /><span>编辑</span></b-col >
+			</b-row>
+		</div>
+		<div class="container">
+			<div class="text_a">
+				<hr/>
+			    <b-row > 
+			    	<b-col cols='9' ><h5>我的优势</h5></b-col ><b-col class='tianjia' ><span @click='dbUpdate()'>编辑</span></b-col >	
+			    	
+			    </b-row > 
+			    <div class='text_t1' v-show='!inputIsShow'>{{ text1 }}</div>
+			    <div class="text_t2" v-show='inputIsShow'>
+					<b-form-input v-model="text1" type="text"  @blur='updateInfo()' :placeholder="text1" v-focus="cur_tr_index"></b-form-input >
+					<span @click="updateInfo()" >确定</span>
+				</div>
+			</div>
+			<div class="text_a">
+				<hr/>
+			    <b-row > 
+			    	<b-col cols='9' ><h5>求职意向</h5></b-col ><b-col class='tianjia' >添加</b-col >	
+			    	
+			    </b-row > 
+			    <div class='text_tt'>1111</div>
+				
+			</div>
+			<div class="text_a">
+				<hr/>
+			    <b-row > 
+			    	<b-col cols='9' ><h5>实习经历</h5></b-col ><b-col class='tianjia' >添加</b-col >	
+			    	
+			    </b-row > 
+			    <div class='text_tt'>111111111</div>
+			</div>
+			<div class="text_a">
+				<hr/>
+			    <b-row > 
+			    	<b-col cols='9' ><h5>我的优势</h5></b-col ><b-col class='tianjia' >添加</b-col >	
+			    	
+			    </b-row > 
+			    <div class='text_tt'></div>
+			</div>
+			
+            
+		</div>
+
+
+	</div>
+</body>
+<script type="text/javascript" src="./public/library/bootstrap-vue.min.js"></script>
+<script>
+new Vue({
+	el:'.job_jianli',
+	data:{
+		modalShow:true,
+		inputIsShow:false,
+		cur_tr_index:null,
+		text1: ''
+	},
+	methods:{
+		dbUpdate(){
+ 			this.inputIsShow = true
+		},
+		updateInfo(){
+			this.inputIsShow = false
+		}
+	}
+})
+
+
+</script>
+
+</html>

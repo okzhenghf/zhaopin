@@ -1,0 +1,129 @@
+
+	.a1_1{
+		line-height: 35px;
+        margin:10px;
+}
+	.a1 .zhi{
+		font-weight: 900; 
+		font-size: 18px; 
+		color: #62d5c8}
+	.a1 .wei .kang{
+		line-height: 35px;
+		width:90px;
+		height:35px;
+		border-radius: 20px ;
+		border: 1px solid #62d5c8; 
+		margin-left: 40%;
+		text-align: center;
+		font-size: 15px;
+		color: #c0c4cf;}
+	.b1{
+		background-color: #62d5c8;
+		color: #fff;}
+	.b1 .b1_1{
+		background-color: #62d5c8;
+	 color: #fff; 
+	 text-align: center;
+	 padding-top:10px;
+	 font-size: 18px; }
+	.b1 .b1_1 .qian{
+		margin-left: 20px; }
+	.b1 .b2_1{
+		background-color: #62d5c8;
+	 color: #fff; 
+	 text-align: center;
+	 padding-top:10px;
+	 font-size: 10px; }
+	.b1 .b2_1 .qian{
+		margin-left: 20px; }
+	.b1 .b2_2{
+		background-color: #62d5c8;
+	    font-size: 10px;
+	    height: 40px;
+	    line-height: 20px; }
+	.b1 .b2_2 .box{
+		border: 1px #fff solid; 
+		border-radius: 15px;
+		float: left; 
+		/* padding :10px,15px; */
+		padding-left: 8px;
+		padding-right: 8px;
+		margin-top: 10px;
+		margin-left: 20px;}
+	.c1 {
+		width: 100%;
+		 overflow: hidden;
+		 float: left;
+		 background-color: #eefbf9;
+		 padding: 17px 18px;}
+	.c1 img{
+		display: block;
+	   width: 53px;
+	   height: 53px; 
+	   border-radius: 100%;} 
+	
+	.c1 .c2_2 .gray{
+		font-size: 10px;
+		color: #c0c4cf;
+		width: 90px;
+		overflow: hidden;
+		text-overflow:ellipsis;
+		white-space: nowrap; }
+	.c1 .c2_2 .btn{ 
+		height: 25px;
+		line-height: 12.5px;
+		width: 80px;
+		border-radius: 15px;
+		font-size: 14px;
+		color: #fff; 
+		background-color: #5dd5c8;
+		margin-top: 10px;}
+	.d1	h3{
+		color: #414a60;
+		font-weight: 700;
+		position: relative;
+		line-height: 44px;
+		font-size: 15px;}
+	.d1 .text{ 
+		padding-top: 11px;
+		color: #7e8793;
+		font-size: 15px;}
+	.details {
+		overflow: hidden;
+	}
+	.details p{
+		color: #7e8793;
+	}
+	.details .content{
+		width: 100%;
+		padding: 10px 10px;
+		border: 1px solid #ccc;
+	}
+	.details .content table tr {
+		font-family:"简体";
+		font-size: 13px;
+		color: #ccc;
+	}
+	.details .content table tr td,th{
+		padding: 10px 10px;
+	}
+	.details .content button{
+		border: none;
+		width: 100%;
+		background: #fff;
+		border-top: 1px solid #ccc;
+	}
+	.details .content button span:after {
+    	content: "";
+    	display: inline-block;
+    	width: 8px;
+    	height: 8px;
+    	border-left: solid 1px #797979;
+    	border-top: solid 1px #797979;
+    	-webkit-transform: rotate(-135deg);
+    	position: relative;
+    	top: -3px;
+    	left: 5px;
+    	transition: all .3s ease 0s;
+    }
+

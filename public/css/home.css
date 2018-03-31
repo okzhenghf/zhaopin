@@ -1,0 +1,449 @@
+	/*公共样式*/
+	body,p,ul,li {
+	    padding: 0px;
+	    margin: 0px;
+		list-style: none;
+	}
+	body {
+		color: #eee;
+	}
+	.vue_html {
+		font-family: 'Avenir', Helvetica, Arial, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-align: center;
+		background-color: #eee;
+		color: #2c3e50;
+	}
+	.container {
+	    padding: 0px 20px;
+	    overflow: hidden;
+	}
+	.kc_list_first .container,.kc_list_second .container,.kc_list_third .container {
+		background-color: #fff;
+	}
+	/*公共样式*/
+
+	/*banner*/
+	.nav {
+		position: relative;
+	}
+	.search {
+		position: absolute;
+		z-index: 9999;
+		overflow: hidden;
+		top: 15px;
+		left: 0px;
+		padding: 0px 20px;
+		width: 100%;
+		border-radius: 30px;
+	}
+	.search_input {
+		padding-left: 50px;
+		border-radius: 30px;
+		background: #fff url(./public/images/icon_search.png) no-repeat;
+		background-size: 14px;
+		background-position: 10px 7px;
+		border: 1px solid #ccc;
+		width: 100%;
+		font-size: 13px;
+		line-height: 24px;
+		outline: none;
+	}
+	input::-webkit-input-placeholder {
+    	color: #999 !important;
+    }
+	.carousel-indicators {
+		margin-bottom: -5px;
+	}
+	.carousel-indicators li {
+	    background-color: #b5b5b5;
+	    border: none;
+	    width: 8px;
+	    height: 8px;
+	}  
+	.carousel-indicators .active {
+		background-color: #757575;
+		width: 10px;
+		height: 10px;
+	}
+	/*banner*/
+	
+	/*提升、教学、招聘、商城*/
+	.row{
+		display: flex;
+	}
+	.menu_img {
+		width: 25%px;
+		height: 91px;
+	}
+	.menu_img img {
+		width: 100%;
+	}
+	.menu_title {
+	    padding-top: 5px;
+	    color: #999;
+	    font-size: 12px;
+	}
+	/*提升、教学、招聘、商城*/
+	
+	/*一元课程tabs*/
+	.el-tabs__nav {
+		display: flex;
+		border-bottom: 1px solid #eee;
+		font-size: 18px;
+		width: 100%;
+	}
+	.el-tabs__item {
+		width: 25%;	
+		line-height: 50px;
+		font-size: 16px;
+		color: #d4d4d4;
+		letter-spacing: 5px;
+		text-align: center;
+	}
+	.kc_list_third .el-tabs__item {
+		margin: 0px 18px;
+	}
+	.el-tabs__item.is-active {
+		border-bottom: 2px solid #f70b56;
+	}
+	.el-tabs__item:nth-child(1) {
+		margin-left: 0px;
+	}
+	.el-tabs__item:nth-child(4) {
+		margin-right: 0px;
+	}
+	.main_title {
+		color: #f70b56;
+	}
+	h4.kc_title {
+		margin: 0px;
+		color: #f70b56;
+		font-weight: bold;
+		background: url(./public/images/title_bg.png) no-repeat;
+		background-size: 180px;
+		background-position: 97px 14px;
+		padding: 20px 0px;
+	}
+	.kc_main {
+		float: left;
+		width: 100%;
+		padding: 10px 0px 20px 0px;
+	}
+	.kc_list_first .kc_list {
+
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
+		overflow: hidden;
+	}
+	.kc_list_first .kc_list li {
+		display: flex;
+		border-bottom: 1px solid #ccc;
+		padding: 10px 0px;
+		height: 100px;
+		width: 100%;
+	}
+	.kc_list_first .kc_list li:last-child {
+		border-bottom: none;
+	}
+	.kc_list_first .list_left {
+		float: left;
+		width: 25%;
+		overflow: hidden;
+		margin-right: 15px
+	}
+	.kc_list_first .list_left img {
+		width: 100%;
+	}
+	.kc_list_first .list_right {
+
+		float: left;
+		text-align: left;
+	}
+	.kc_list_first .list_right h4 {
+		margin: 0px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	.kc_list_first .list_right p {
+		font-size: 12px;
+	}
+	.kc_list_first .list_bottom {
+		color: #888;
+		margin-top: 5px;
+		font-size: 12px;
+	}
+	.kc_list_first .list_bottom p {
+		display: inline-block;
+		padding: 3px 18px;
+		border: 1px solid #888;
+		border-radius: 100px;
+		font-size: 12px;
+		line-height: 15px;
+		margin-right: 50px;
+	}
+	/*一元课程tabs*/
+
+	/*一元资讯tabs*/
+	.kc_list_second .container {
+		background-color: #fff;
+		overflow: hidden;
+	}
+	.kc_list_second .kc_list{
+		width: 100%;
+		overflow: hidden;
+	}
+	.kc_list_second .kc_list .img_title {
+		width: 100%;
+	}
+	.kc_list_second .kc_list li {
+		border-bottom: 1px solid #ccc;
+		padding-top: 3px;
+	}
+	.kc_list_second .kc_list li:first-child {
+		border-bottom: none;
+	}
+	.kc_list_second .kc_list li:last-child {
+		border-bottom: none;
+	}
+	.kc_list_second .list_left {
+		float: left;
+		width: 70%;
+		height: 60px;
+		line-height: 20px;
+		padding-right: 20px;
+	}
+	.kc_list_second .list_right {
+		overflow: hidden;
+		width: 30%;
+		height: 65px;
+		margin: 5px 0px;
+	}
+	.kc_list_second .list_right img {
+		width: 100%;
+		margin-left: -25px;
+		margin-bottom: 5px;
+		/*height: 100%;*/
+	}
+	.kc_list_second .list_left {
+		float: left;
+		text-align: left;
+	}
+	.kc_list_second .list_left p {
+		padding-left: 10px;
+		padding-top: 18px;
+		font-size: 12px;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+	}
+	/*一元资讯tabs*/
+
+	/*一元人才tabs*/
+	.kc_list_third .kc_nav .el-tabs__nav-scroll .el-tabs__nav .el-tabs__item{
+        padding: 0px 0px;
+	}
+	.kc_list_third .kc_main {
+		padding-top: 10px;
+		padding-bottom: 0px;
+	}
+	.kc_list_third .kc_list .underline {
+		display: flex;
+		width: 100%;
+		overflow: hidden;
+	}
+	.kc_list_third .kc_list .list_left {
+		float: left;
+		overflow: hidden;
+		width: 25%;
+
+	}
+	.kc_list_third .kc_list .list_left img {
+		border-radius: 50%;
+		padding-right: 5px;
+		width: 100%;
+		height: 100%;	
+	}
+	.kc_list_third .kc_list .list_right {
+		float: left;
+		overflow: hidden;
+		padding-top: 5px;
+		width: 70%;
+	}
+	.kc_list_third .kc_list .list_right h3 {
+		float: left;
+	}
+	.kc_list_third .kc_list .list_right ul {
+		overflow: hidden;
+	}
+	.kc_list_third .kc_list .list_right ul li {
+		width: 100%;
+		/*padding: 2px 0px;*/
+		float: left;
+	}
+	.kc_list_third .list_right_top {
+		padding: 0px;
+	}
+	.kc_list_third .list_right_top p {
+		float: left;
+		display: inline-block;
+		margin: 0px 35px 0px 2px;
+	}
+	.kc_list_third .list_right_top span {
+		float: right;
+		display: inline-block;
+		padding-top: 5px;
+		font-size: 12px;
+		color: #898989;
+	}
+	.kc_list_third .list_right_center p {
+		float: left;
+		font-size: 14px;
+		display: inline-block;
+	}
+	.kc_list_third .list_right_center span {
+		float: left;
+		font-size: 10px;
+		display: inline-block;
+		padding-top: 3px;
+	}
+	.kc_list_third .list_right_bottom {
+		color: #888;
+		margin-top: 10px;
+		font-size: 11px;
+	}
+	.kc_list_third .list_right_bottom p {
+		display: inline-block;
+		float: left;
+		padding: 1px 16px;
+		line-height: 16px;
+		border: 1px solid #888;
+		border-radius: 150px;
+		font-size: 11px;
+		margin-bottom: 5px;
+	}
+	.kc_list_third .list_right_bottom span {
+		display: inline-block;
+		float: right;
+		padding-top: 3px;
+	}
+	.underline {
+		border-bottom: 1px solid #d4d4d4;
+		padding: 10px 0px;
+	}
+	/*一元人才tabs*/
+	/*footer*/
+	footer {
+		width: 100%;
+		position: fixed;
+		z-index: 9998;
+		bottom: 0;
+		
+		border-top: 1px solid #ccc;
+		box-shadow: 0px 4px 10px black;
+		background-color: #fff;
+		height: 55px;
+	}
+	.footer_box {
+		position: relative;
+		z-index: 9998;
+		background-color: #fff;
+		height: 55px;
+	}
+	.footer_home {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 50%;
+		line-height: 85px;
+		overflow: hidden;
+	}
+	.footer_home div {
+		width: 100px;
+		height: 100px;
+		padding-bottom: 20px;
+		text-align: center;
+	}
+	.footer_home img {
+		position: absolute;
+		top: 5px;
+		left: 35px;
+		width: 30px;
+	}
+	.footer_home p {
+		font-size: 12px;
+		color: #FF303A;
+	}
+	.footer_more {
+		position: absolute;
+		z-index: 9999;
+		overflow: hidden;
+		transform: translate(-15%,-25%);
+		left: 45%;
+	}
+	.footer_more img {
+		width: 70px;
+		height: 70px;
+	}
+	.footer_main {
+		position: absolute;
+		z-index: 2;
+		left: 44%;
+		top: -23%;
+		
+	}
+	.footer_main img {
+		position: absolute;
+		transition: all .5s;
+		width: 60px;
+		height: 60px;
+	}
+	.footer_main img:nth-child(1) {
+		transform: translate(-78px,-50px);
+		opacity: 1;
+	}
+	.footer_main img:nth-child(2) {
+		transform: translate(-30px,-88px);
+		opacity: 1;
+	}
+	.footer_main img:nth-child(3) {
+		transform: translate(30px,-88px);
+		opacity: 1;
+	}
+	.footer_main img:nth-child(4) {
+		transform: translate(80px,-50px);
+		opacity: 1;
+	}
+	.clear {
+		transform: translate(0px,0px) !important;
+		opacity: 0 !important;
+	}
+	.footer_user {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		width: 50%;
+		line-height: 85px;
+		overflow: hidden;
+	}
+	.footer_user div {
+		width: 100px;
+		height: 100px;
+		padding-bottom: 20px;
+		text-align: center;
+	}
+	.footer_user img {
+		position: absolute;
+		top: 5px;
+		right: 35px;
+		width: 23px;
+	}
+	.footer_user p {
+		position: absolute;
+		right: 35px;
+		font-size: 12px;
+	}
+	/*footer*/

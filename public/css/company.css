@@ -1,0 +1,121 @@
+*{
+		margin: 0px;
+		padding: 0px;
+		font-family: 微信软体;
+	}
+	.title{
+		background: #5dd5c8;
+		width: 100%;
+		z-index: 999;
+		overflow: hidden;
+	}
+	.title img{
+	    width: 42px;
+	    height: 42px;
+	    margin-top: 7px;
+	    margin-right: 10px;
+	}
+  .title .el-row {
+  	margin: 10px;
+  	padding-left: 20px;
+  }
+  .title .el-row h3{
+  	color: #fff;
+  	font-size: 15px;
+  }
+  .title .right{
+  	font-size: 15px;
+  	float: right;
+  	margin-right:40px;
+  	
+  }
+
+ .title .el-row .el-button{
+ 	color: #5dd5c8;
+ 	font-size: 18px;
+
+ }
+ .box{
+ 	height: 160px;
+ }
+ .box .mint-swipe-item img{
+ 	width: 100%;
+ 	height: 100%;
+ }
+ .box .c_s{
+ 	position: relative;
+ 	top:90%;
+ 	left:90%;
+ 	color: #fff;
+ }
+ .gs_lg{
+		width: 100%;
+		display: flex;
+		border-bottom: 10px solid #ededed;
+	}
+	.gs_lg .left{
+		margin: 20px;
+
+	}
+	.gs_lg .right{
+		padding-top:20px;
+	}
+	.gs_lg .right .big{
+		font-size: 20px;
+	}
+	.gs_lg .right p{
+		font-size: 14px;
+		color: rgb(65,74,96);
+		
+	}
+	.gs_lg .right p span{
+		padding-right: 10px;
+	}
+	.gs_lg .right p span+span{
+		padding-left:20px; 
+		border-left: 1px solid #e0e0e0;
+
+	}
+	.tab .el-tabs__nav{
+		width: 100%;
+		display: flex;
+	}
+	.tab .el-tabs__active-bar{
+		width: 50% !important;
+	}
+	.tab .is-top{
+		padding: 0px !important;
+		width: 100%;
+		text-align: center;
+		font-size: 20px;
+		overflow: hidden;
+	}
+	.tab .el-tabs__nav-wrap::after{
+		width: 0;
+	}
+	.tab .first{
+		margin: 0px 20px;
+		font-size: 14px;
+		color: rgb(65,74,70);
+	}
+	.tab .el-tabs__content .el-tabs__nav{
+		width: 100%;
+		display: flex;
+	}
+	.tab .el-tabs__content .el-tabs__active-bar{
+		width: 0% !important;
+	}
+	.tab .el-tabs__content .is-top{
+		font-size: 16px;
+	} 
+
+	.tab .el-tabs__content .el-tabs__nav-wrap::after{
+		width: 100%;
+	}
+
+	.tab .el-tabs__content .el-row .el-col-18 h3{
+		margin-left: 20px;
+	}
+	.tab .el-tabs__content .el-row .el-row{
+		text-align: center;
+	}
